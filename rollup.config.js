@@ -3,6 +3,8 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 
+import postcss from "rollup-plugin-postcss";
+
 const packageJson = require("./package.json");
 
 export default {
@@ -23,6 +25,7 @@ export default {
     peerDepsExternal(),
     resolve(),
     commonjs(),
+    postcss(),
     typescript({
       tsconfig: './tsconfig.json',
     })
