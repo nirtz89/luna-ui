@@ -1,0 +1,36 @@
+$gray: #e0e0e0;
+$blue: rgba(84,129,227,1);
+$secondary-blue: rgba(84,165,227,1);
+$red: #ca4452;
+$secondary-red: #db3256;
+$green: #76ba37;
+$secondary-green: #8aba37;
+$yellow: #f2b92e;
+$secondary-yellow: #f2c82e;
+
+/** Shadows **/
+$soft-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+@function button-gradient($primary, $secondary) {
+    @return linear-gradient(180deg, $primary 0%, $secondary 100%);
+}
+
+@mixin primary-gradient {
+    background: $blue;
+    background: button-gradient($blue, $secondary-blue)
+}
+
+@mixin danger-gradient {
+    background: $red;
+    background: button-gradient($red, $secondary-red)
+}
+
+@mixin success-gradient {
+    background: $green;
+    background: button-gradient($green, $secondary-green);
+}
+
+@mixin warn-gradient {
+    background: $yellow;
+    background: button-gradient($yellow, $secondary-yellow);
+}

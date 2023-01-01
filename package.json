@@ -1,8 +1,8 @@
 {
-  "name": "typescript-storybook-component-library-template",
-  "version": "1.0.0",
-  "repository": "git@github.com:seeratawan01/Typescript-React-Storybook-Library-Starter.git",
-  "author": "Seerat Awan <seeratawan01@users.noreply.github.com>",
+  "name": "luna-ui",
+  "version": "0.0.1",
+  "repository": "",
+  "author": "Nir Tzezana <nirtz89@gmail.com>",
   "license": "MIT",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",

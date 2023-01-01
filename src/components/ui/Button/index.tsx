@@ -1,15 +1,28 @@
-import {ReactNode} from 'react'
-import './button.scss';
+import { ReactNode } from "react";
+import "./button.scss";
+import {
+  ELunaButtonColors,
+  ELunaButtonVariants,
+  LunaButtonProps,
+} from "./types";
 
-export interface Props {
-  type?: 'button' | 'submit' | 'reset'
-  children: ReactNode | Array<ReactNode>
-}
-
-function Button ({children, type = 'button'}: Props) {
+function Button({
+  children,
+  type = "button",
+  variant = ELunaButtonVariants.REGULAR,
+  color = ELunaButtonColors.PRIMARY,
+  shadowed = false,
+}: LunaButtonProps) {
   return (
-    <button  className={'sneakers-button'} type={type}>{children}</button>
-  )
+    <button
+      className={`luna-button ${variant} ${color} ${
+        shadowed && variant !== ELunaButtonVariants.GHOST && "shadowed"
+      }`}
+      type={type}
+    >
+      {children}
+    </button>
+  );
 }
 
-export default Button
+export default Button;
