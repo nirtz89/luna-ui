@@ -28,6 +28,7 @@ export default {
     postcss(),
     typescript({
       tsconfig: './tsconfig.json',
+      exclude: ['**/*.stories.tsx'],
     })
   ]
 };

@@ -1,14 +1,36 @@
-# Component library template
+# Luna UI
 
-A working template with build and storybook for a Typescript + React 17 component libary, based on https://prateeksurana.me/blog/react-component-library-using-storybook-6/.
+A React component library with an interactive Storybook for exploring components.
 
-## Using This Repo
+## Development
 
-1. `git clone https://github.com/seeratawan01/Typescript-React-Storybook-Library-Starter.git && cd <into app folder>`
-2. `yarn` (To install dependencies)
-3. `yarn storybook` (for the storybook)
+Use Node.js 22 (see `.nvmrc`) and npm.
 
+```sh
+npm ci
+npm run storybook
+```
 
-Run `yarn build` to get your build under `lib`.
+Storybook runs at http://localhost:6006. The Button stories include controls,
+generated API documentation, and examples of every color and variant.
 
+## Validation and builds
 
+```sh
+npm run typecheck
+npm test -- --runInBand
+npm run build
+npm run build-storybook
+```
+
+The library builds to `lib/`; the static Storybook builds to `storybook-static/`.
+
+## Netlify
+
+[Live Storybook](https://luna-ui-storybook.netlify.app) ·
+[Netlify dashboard](https://app.netlify.com/projects/luna-ui-storybook)
+
+Netlify is connected to `nirtz89/luna-ui` with `main` as the production branch. It reads
+`netlify.toml`, runs `npm run build-storybook`, and publishes `storybook-static/`
+on every push to `main`. Node.js is selected from `.nvmrc`, and `package-lock.json`
+keeps dependency installation reproducible. Local Netlify state is gitignored.
